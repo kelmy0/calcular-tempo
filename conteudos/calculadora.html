@@ -1,0 +1,103 @@
+<div class="p-1">
+	<h1 class="text-center mt-3 mb-5">Calcular tempo</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-6 d-none">
+				<form id="tipoCalculadora" class="form-group">
+					<h5>Tipo de calculadora</h5>
+					<input value="decimal" checked class="form-check-input" type="radio" name="tipo" id="tipoDecimal">
+					<label class="form-check-label" for="tipoDecimal">Decimal</label>
+
+					<input value="horas" class="form-check-input" type="radio" name="tipo" id="tipoHoras">
+					<label class="form-check-label" for="tipoHoras">Horas</label>
+					<br />
+				</form>
+			</div>
+			<div class="col-6 p-0 d-none">
+				<form id="tipoCalculoTempo" class="form-group">
+					<h5>Tipo de cálculo</h5>
+
+					<input class="form-check-input" id="tempoNaoConvertido" type="radio" name="tipoTempo"
+						value="tempoNC"
+						onclick="alterarElemento('#descTempo', 'Neste modo você não deve converter o tempo para decimal, apenas escreva o tempo diretamente (ex: 05:33 -> 05,33).')"
+						checked>
+					<label for="tempoNaoConvertido" class="form-check-label">Converter</label><br>
+
+					<input class="form-check-input" id="tempoConvertido" type="radio" name="tipoTempo" value="tempoC"
+						onclick="alterarElemento('#descTempo', 'Neste modo você deve converter a hora manualmente para decimal!')">
+					<label for="tempoConvertido" class="form-check-label">Não converter</label>
+				</form>
+			</div>
+			<p class="read mt-2" id="descTempo">Neste modo você não deve converter o tempo para decimal, você apenas
+				deve escrever o tempo diretamente (ex: 05:33 -> 05,33).</p>
+		</div>
+	</div>
+
+	<div class="container border border-secondary bg-dark" id="calculadora">
+		<div class="row">
+			<div class="col-10 m-0">
+				<textarea inputmode="numeric"
+					class="h4 d-flex align-content-center bg-secondary my-2 p-2 text-light w-100" id="visor"
+					oninput="acaoCalculadora('inputVisor')" style="overflow: hidden; resize: none;" rows="1"
+					placeholder="0">0</textarea>
+			</div>
+			<div class="col-2 ps-0 m-0 align-content-center">
+				<button class="btn btn-outline-light w-100 text-center px-0	m-0 py-2"
+					onclick="acaoCalculadora('removerCaracter')">&#9003;</button>
+			</div>
+		</div>
+
+		<div class="container bg-dark d-flex flex-column py-2">
+			<div class="row">
+				<div class="col-3 py-md-4 py-2 text-danger text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('clearAll')">C</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary ">()</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary">%</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', '/')">&divide;</div>
+			</div>
+			<div class="row">
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', 7)">7</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', 8)">8</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', 9)">9</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', 'x')">&times;</div>
+			</div>
+			<div class="row">
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', 4)">4</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', 5)">5</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', 6)">6</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', '-')">&minus;</div>
+			</div>
+			<div class="row">
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', 1)">1</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', 2)">2</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', 3)">3</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', '+')">&#43;</div>
+			</div>
+			<div class="row">
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary">&#43;/&minus;</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', 0)">0</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-outline-secondary"
+					onclick="acaoCalculadora('addNumber', ',')">,</div>
+				<div class="col-3 py-md-4 py-2 text-light text-center btn btn-primary"
+					onclick="acaoCalculadora('calcular')">&#61;</div>
+			</div>
+		</div>
+	</div>
+	<div class="container mt-4">
+		<div class="row" id="respostas"></div>
+	</div>
+</div>

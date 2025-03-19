@@ -1,0 +1,30 @@
+.placeholder-light::-webkit-input-placeholder{
+    color: #fff !important;
+    font-weight: bold !important;
+}
+.placeholder-light::-moz-placeholder{
+    color: #fff !important;
+    font-weight: bold !important;
+}
+.placeholder-light:-ms-input-placeholder{
+    color: #fff !important;
+    font-weight: bold !important;
+}
+.placeholder-light::-ms-input-placeholder{
+    color: #fff !important;
+    font-weight: bold !important;
+}
+.placeholder-light::placeholder{
+    color: #fff !important;
+    font-weight: bold !important;
+}
+
+.link{
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+}
+
+.link:hover{
+    text-decoration: underline;
+    color: rgb(126, 126, 126);
+}
