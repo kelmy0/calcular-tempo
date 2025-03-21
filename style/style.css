@@ -1,89 +1,93 @@
-
-table{
+table {
     table-layout: fixed;
     width: 100%;
     padding-right: 0.2em;
 }
 
-th{
+th {
     padding: 0 !important;
 }
 
-.td{
+.td {
     max-width: 100% !important;
     hyphens: auto !important;
     word-break: break-all;
     overflow: hidden;
     text-overflow: ellipsis;
+}
 
-body{
-max-width: 100%;
+body {
+    max-width: 100%;
     overflow-x: hidden !important;
 }
 
-tr{
+tr {
     box-sizing: border-box !important;
     overflow-x: hidden !important;
     text-overflow: "-";
-    max-width: 100%  !important;
+    max-width: 100% !important;
 }
 
-td{
+td {
     box-sizing: border-box !important;
-    overflow-x: hidden !important ;
+    overflow-x: hidden !important;
     text-overflow: "-";
     max-width: 100%;
 }
 
-.tr{
+.tr {
     box-sizing: border-box !important;
     overflow-x: hidden !important;
     text-overflow: "-";
-    max-width: 100%  !important;
+    max-width: 100% !important;
 }
 
-.td{
+.td {
     box-sizing: border-box !important;
-    overflow-x: hidden !important ;
+    overflow-x: hidden !important;
     text-overflow: "-";
     max-width: 100%;
 
 }
 
-.placeholder-light::-webkit-input-placeholder{
-    color: #fff !important;
-    font-weight: bold !important;
-}
-.placeholder-light::-moz-placeholder{
-    color: #fff !important;
-    font-weight: bold !important;
-}
-.placeholder-light:-ms-input-placeholder{
-    color: #fff !important;
-    font-weight: bold !important;
-}
-.placeholder-light::-ms-input-placeholder{
-    color: #fff !important;
-    font-weight: bold !important;
-}
-.placeholder-light::placeholder{
+.placeholder-light::-webkit-input-placeholder {
     color: #fff !important;
     font-weight: bold !important;
 }
 
-.link{
+.placeholder-light::-moz-placeholder {
+    color: #fff !important;
+    font-weight: bold !important;
+}
+
+.placeholder-light:-ms-input-placeholder {
+    color: #fff !important;
+    font-weight: bold !important;
+}
+
+.placeholder-light::-ms-input-placeholder {
+    color: #fff !important;
+    font-weight: bold !important;
+}
+
+.placeholder-light::placeholder {
+    color: #fff !important;
+    font-weight: bold !important;
+}
+
+.link {
     text-decoration: none;
     color: rgb(12, 12, 12);
 }
 
-.link:hover{
+.link:hover {
     text-decoration: underline;
     color: rgb(126, 126, 126);
 }
 
-#lista-achados{
+#lista-achados {
     box-sizing: border-box !important;
-    overflow-x: hidden !important ;
+    overflow-x: hidden !important;
     text-overflow: "-";
     max-width: 100%;
 }
