@@ -1,17 +1,17 @@
 body{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 tr{
-    overflow-x: clip;
+    overflow-x: hidden !important;
     text-overflow: "-";
-    max-width: 90%;
+    max-width: 100%  !important;
 }
 
 td{
-    overflow-x: clip;
+    overflow-x: hidden !important ;
     text-overflow: "-";
-    max-width: 90%;
+    max-width: 100%;
 }
 
 .placeholder-light::-webkit-input-placeholder{
