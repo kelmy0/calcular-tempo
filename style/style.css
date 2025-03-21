@@ -1,3 +1,13 @@
+tr{
+    text-overflow: "-";
+    max-width: 100%;
+}
+
+td{
+    text-overflow: "-";
+    max-width: 100%;
+}
+
 .placeholder-light::-webkit-input-placeholder{
     color: #fff !important;
     font-weight: bold !important;
