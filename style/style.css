@@ -1,14 +1,31 @@
 body{
+max-width: 100%;
     overflow-x: hidden !important;
 }
 
 tr{
+    box-sizing: border-box !important;
     overflow-x: hidden !important;
     text-overflow: "-";
     max-width: 100%  !important;
 }
 
 td{
+    box-sizing: border-box !important;
+    overflow-x: hidden !important ;
+    text-overflow: "-";
+    max-width: 100%;
+}
+
+.tr{
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    text-overflow: "-";
+    max-width: 100%  !important;
+}
+
+.td{
+    box-sizing: border-box !important;
     overflow-x: hidden !important ;
     text-overflow: "-";
     max-width: 100%;
