@@ -3,13 +3,13 @@ body{
 }
 
 tr{
-    overflow: clip;
+    overflow-x: clip;
     text-overflow: "-";
     max-width: 90%;
 }
 
 td{
-    overflow: clip;
+    overflow-x: clip;
     text-overflow: "-";
     max-width: 90%;
 }
