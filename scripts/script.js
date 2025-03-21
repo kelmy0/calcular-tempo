@@ -104,13 +104,13 @@ class Lista {
 
 		for (let key in this.#infos) {
 			let info = this.#infos[key]
-			let element = `<tr id='TR${key.replace(' ', '')}'>
-							<td>${key}</td>
-							<td>${info.total}</td>
-							<td>${info.media}</td>
-							<td>${info.maior}</td>
-							<td>${info.menor}</td>
-							<td><button class='btn btn-danger' onclick='lista.deleteKey("${key}")'>Excluir</button></td>
+			let element = `<tr class="tr" id='TR${key.replace(' ', '')}'>
+							<td class="td">${key}</td>
+							<td class="td">${info.total}</td>
+							<td class="td">${info.media}</td>
+							<td class="td">${info.maior}</td>
+							<td class="td">${info.menor}</td>
+							<td class="td"><button class='btn btn-danger' onclick='lista.deleteKey("${key}")'>Excluir</button></td>
 						</tr>`
 			conteudo = conteudo + element
 		}
