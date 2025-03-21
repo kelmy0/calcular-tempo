@@ -1,9 +1,11 @@
 tr{
+    overflow: clip;
     text-overflow: "-";
     max-width: 100%;
 }
 
 td{
+    overflow: clip;
     text-overflow: "-";
     max-width: 100%;
 }
