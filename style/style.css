@@ -61,3 +61,10 @@ td{
     text-decoration: underline;
     color: rgb(126, 126, 126);
 }
+
+#lista-achados{
+    box-sizing: border-box !important;
+    overflow-x: hidden !important ;
+    text-overflow: "-";
+    max-width: 100%;
+}
