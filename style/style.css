@@ -1,3 +1,7 @@
+body{
+    overflow: hidden;
+}
+
 tr{
     overflow: clip;
     text-overflow: "-";
