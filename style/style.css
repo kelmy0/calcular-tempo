@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 table{
     table-layout: fixed;
     width: 100%;
@@ -15,7 +15,7 @@ th{
     word-break: break-all;
     overflow: hidden;
     text-overflow: ellipsis;
-=======
+
 body{
 max-width: 100%;
     overflow-x: hidden !important;
@@ -47,7 +47,7 @@ td{
     overflow-x: hidden !important ;
     text-overflow: "-";
     max-width: 100%;
->>>>>>> 68aa0617c15c0b9ed6f26bd0b7581d1de08498ec
+
 }
 
 .placeholder-light::-webkit-input-placeholder{
