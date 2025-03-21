@@ -1,3 +1,21 @@
+table{
+    table-layout: fixed;
+    width: 100%;
+    padding-right: 0.2em;
+}
+
+th{
+    padding: 0 !important;
+}
+
+.td{
+    max-width: 100% !important;
+    hyphens: auto !important;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .placeholder-light::-webkit-input-placeholder{
     color: #fff !important;
     font-weight: bold !important;
