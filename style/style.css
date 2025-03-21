@@ -1,13 +1,13 @@
 tr{
     overflow: clip;
     text-overflow: "-";
-    max-width: 100%;
+    max-width: 90%;
 }
 
 td{
     overflow: clip;
     text-overflow: "-";
-    max-width: 100%;
+    max-width: 90%;
 }
 
 .placeholder-light::-webkit-input-placeholder{
